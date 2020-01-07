@@ -18,7 +18,7 @@ class EntryView(LoginRequiredMixin,DetailView):
 class CreateEntityView(LoginRequiredMixin,CreateView):
     model = Entry
     template_name = 'create-view.html'
-    fields=['entry_title','entry_text']
+    fields=['entry_title','entry_text','entry_image']
     
     def form_valid(self, form):
         form.instance.entry_author = self.request.user

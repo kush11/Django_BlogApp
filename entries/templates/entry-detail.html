@@ -1,7 +1,7 @@
 {% extends 'index.html' %}
 {% block content %}
 <div class="card mb-4">
-    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+    <img class="card-img-top" src={{object.entry_image}} alt="Card image cap">
     <div class="card-body">
         <h2 class="card-title">{{object.entry_title}}</h2>
         <p class="card-text">{{object.entry_text}}</p>
