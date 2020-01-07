@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card mb-4">
+    {% comment %} <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> {% endcomment %}
+    <div class="card-header">
+        Create Blog Post
+        {% comment %} <h2 class="card-title">{{object.entry_title}}</h2>
+        <p class="card-text">{{object.entry_text}}</p> {% endcomment %}
+        {% comment %} <a href="#" class="btn btn-primary">Read More &rarr;</a> {% endcomment %}
+    </div>
+    <div class="card-body">
+        <form method='POST'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-primary">
+                Create Entry
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

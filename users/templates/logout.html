@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card col-md-8">
+    <h4>
+        You have sucessfully logout
+        <a href="{% url 'login' %}"> Log back in here.</a>
+    </h4>
+</div>
+{% endblock %}
